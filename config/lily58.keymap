@@ -13,7 +13,7 @@
         compatible = "zmk,combos";
 
         layerSwap0 {
-            bindings = <&tog 0>;
+            bindings = <&tog 1>;
             key-positions = <42 43>;
             layers = <1>;
         };
