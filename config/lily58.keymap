@@ -23,6 +23,11 @@
             bindings = <&tog 1>;
             key-positions = <42 43 1>;
         };
+
+        layerSwap2 {
+            bindings = <&tog 2>;
+            key-positions = <42 43 2>;
+        };
     };
 
     macros {
