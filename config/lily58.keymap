@@ -52,7 +52,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "qwerty";
             display-name = "qwerty";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -72,7 +71,6 @@
         };
 
         first_layer {
-            label = "gallium";
             display-name = "gallium";
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                        &kp N6         &kp N7  &kp N8   &kp N9         &kp N0      &kp GRAVE
@@ -84,8 +82,7 @@
         };
 
         second_layer {
-            label = "gaming";
-            display-name = "qwerty";
+            display-name = "gaming";
             bindings = <
 &kp F13  &kp ESC         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                        &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
 &kp F14  &kp TAB         &kp Q         &kp W         &kp E         &kp R                               &kp T          &kp Y         &kp U         &kp I         &kp O         &kp P
@@ -96,8 +93,7 @@
         };
 
         lower_layer {
-            label = "lower";
-            display-name = "Lower";
+            display-name = "lower";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
@@ -116,8 +112,7 @@
         };
 
         raise_layer {
-            label = "raise";
-            display-name = "Raise";
+            display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
