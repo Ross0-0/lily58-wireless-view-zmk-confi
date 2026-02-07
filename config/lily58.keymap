@@ -17,16 +17,19 @@
         layerSwap0 {
             bindings = <&tog 0>;
             key-positions = <42 43 0>;
+            layers = <0 1 2>;
         };
 
         layerSwap1 {
             bindings = <&tog 1>;
             key-positions = <42 43 1>;
+            layers = <0 1 2>;
         };
 
         layerSwap2 {
             bindings = <&tog 2>;
             key-positions = <42 43 2>;
+            layers = <0 1 2>;
         };
     };
 
