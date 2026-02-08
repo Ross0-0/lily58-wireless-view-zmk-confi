@@ -15,20 +15,14 @@
         compatible = "zmk,combos";
 
         layerSwap0 {
-            bindings = <&tog 0>;
+            bindings = <&tog 1>;
             key-positions = <42 43 0>;
             layers = <0 1>;
         };
 
         layerSwap1 {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <42 43 1>;
-            layers = <0 1>;
-        };
-
-        layerSwap2 {
-            bindings = <&tog 0>;
-            key-positions = <42 43 2>;
             layers = <0 1>;
         };
     };
@@ -55,25 +49,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "qwerty";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
-
-            bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6      &kp N7  &kp N8      &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                               &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                               &kp H       &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &copy        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
-            >;
-        };
-
-        first_layer {
             display-name = "Gallium";
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6      &kp N7  &kp N8      &kp N9         &kp N0      &kp GRAVE
@@ -84,8 +59,20 @@
             >;
         };
 
-        second_layer {
+        first_layer {
             display-name = "qwerty";
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6      &kp N7  &kp N8      &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                               &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                               &kp H       &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &copy        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
+            >;
+
+        };
+
+        second_layer {
+            display-name = "Gaming";
             bindings = <
 &kp ESC         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                                 &kp N6      &kp N7  &kp N8      &kp N9   &kp N0    &kp GRAVE
 &kp TAB         &kp Q   &kp W   &kp E     &kp R      &kp T                                  &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
@@ -93,20 +80,10 @@
 &kp LCTRL       &kp Z   &kp X   &kp C     &kp V      &kp B   &kp LEFT_ALT    &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
                                 &kp LALT  &kp LCTRL  &mo 5   &kp SPACE       &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
             >;
-
-            label = "Gaming";
         };
 
         lower_layer {
-            display-name = "lower";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
+            display-name = "Lower";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
@@ -117,15 +94,7 @@
         };
 
         raise_layer {
-            display-name = "raise";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
-
+            display-name = "Raise";
             bindings = <
 &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                    &trans       &trans     &trans     &trans     &trans    &trans
 &kp GRAVE  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                    &kp N6       &kp N7     &kp UP     &kp N9     &kp N0    &none
@@ -135,8 +104,8 @@
             >;
         };
 
-        Glower_layer {
-            display-name = "Gaming Lower";
+        gLower_layer {
+            display-name = "GLower";
             bindings = <
 &kp F12  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                    &trans       &trans     &trans     &trans     &trans    &trans
 &kp F11  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp N6       &kp N7     &kp UP     &kp N9     &kp N0    &none
@@ -144,8 +113,6 @@
 &kp F7   &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
                                      &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
             >;
-
-            label = "Gaming Lower";
         };
     };
 };
