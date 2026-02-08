@@ -17,13 +17,13 @@
         layerSwap0 {
             bindings = <&tog 1>;
             key-positions = <42 43 0>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         layerSwap1 {
             bindings = <&tog 2>;
             key-positions = <42 43 1>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
     };
 
@@ -68,7 +68,6 @@
 &sk LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &copy        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
                            &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
             >;
-
         };
 
         second_layer {
