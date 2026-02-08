@@ -17,19 +17,19 @@
         layerSwap0 {
             bindings = <&tog 0>;
             key-positions = <42 43 0>;
-            layers = <0 1 2>;
+            layers = <0 1>;
         };
 
         layerSwap1 {
             bindings = <&tog 1>;
             key-positions = <42 43 1>;
-            layers = <0 1 2>;
+            layers = <0 1>;
         };
 
         layerSwap2 {
-            bindings = <&tog 2>;
+            bindings = <&tog 0>;
             key-positions = <42 43 2>;
-            layers = <0 1 2>;
+            layers = <0 1>;
         };
     };
 
@@ -74,7 +74,7 @@
         };
 
         first_layer {
-            display-name = "gallium";
+            display-name = "Gallium";
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6      &kp N7  &kp N8      &kp N9         &kp N0      &kp GRAVE
 &kp TAB    &kp B   &kp L   &kp D     &kp C     &kp V                               &kp J       &kp Y   &kp O       &kp U          &kp COMMA   &kp MINUS
@@ -85,14 +85,16 @@
         };
 
         second_layer {
-            display-name = "gaming";
+            display-name = "qwerty";
             bindings = <
-&kp F13  &kp ESC         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                              &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&kp F14  &kp TAB         &kp Q         &kp W         &kp E         &kp R                                     &kp T         &kp Y         &kp U         &kp I         &kp O         &kp P
-&kp F15  &kp LEFT_SHIFT  &kp A         &kp S         &kp D         &kp F                                     &kp G         &kp H         &kp J         &kp K         &kp L         &kp SEMI
-&sk F16  &kp LCTRL       &kp Z         &kp X         &kp C         &kp V         &kp F17      &kp F18        &kp B         &kp N         &kp M         &kp COMMA     &kp PERIOD    &kp SLASH
-                                       &kp LALT      &kp LGUI      &mo 4         &kp SPACE    &kp BACKSPACE  &kp RETURN    &kp F8        &kp DELETE
+&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                                 &kp N6      &kp N7  &kp N8      &kp N9   &kp N0    &kp GRAVE
+&kp TAB         &kp Q   &kp W   &kp E     &kp R      &kp T                                  &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F      &kp G                                  &kp H       &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C     &kp V      &kp B   &kp LEFT_ALT    &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LCTRL  &mo 5   &kp SPACE       &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
             >;
+
+            label = "Gaming";
         };
 
         lower_layer {
@@ -131,6 +133,19 @@
 &kp F7     &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
                                        &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
             >;
+        };
+
+        Glower_layer {
+            display-name = "Gaming Lower";
+            bindings = <
+&kp F12  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                    &trans       &trans     &trans     &trans     &trans    &trans
+&kp F11  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp N6       &kp N7     &kp UP     &kp N9     &kp N0    &none
+&none    &none         &none         &none         &none         &none                           &none        &kp LEFT   &kp DOWN   &kp RIGHT  &none     &none
+&kp F7   &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
+                                     &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
+            >;
+
+            label = "Gaming Lower";
         };
     };
 };
