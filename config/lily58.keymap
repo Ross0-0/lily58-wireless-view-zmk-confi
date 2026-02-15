@@ -55,7 +55,7 @@
 &kp TAB    &kp B   &kp L   &kp D     &kp C     &kp V                               &kp J       &kp Y   &kp O       &kp U          &kp COMMA   &kp BACKSLASH
 &kp LCTRL  &kp N   &kp R   &kp T     &kp S     &kp G                               &kp P       &kp H   &kp A       &kp E          &kp I       &kp QUESTION
 &sk LSHFT  &kp X   &kp Q   &kp M     &kp W     &kp Z   &copy        &paste         &kp K       &kp F   &kp SQT     &kp SEMICOLON  &kp PERIOD  &kp SLASH
-                           &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
+                           &kp LALT  &kp LGUI  &mo 4   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 5   &kp DELETE
             >;
         };
 
@@ -66,7 +66,7 @@
 &kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                               &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
 &kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                               &kp H       &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &copy        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
+                           &kp LALT  &kp LGUI  &mo 4   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 5   &kp DELETE
             >;
         };
 
@@ -76,9 +76,21 @@
 &kp ESC         &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                              &kp N6      &kp N7  &kp N8      &kp N9   &kp N0    &kp GRAVE
 &kp TAB         &kp Q   &kp W   &kp E     &kp R      &kp T                               &kp Y       &kp U   &kp I       &kp O    &kp P     &kp MINUS
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F      &kp G                               &kp H       &kp J   &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C     &kp V      &kp B   &mo 5        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                                &kp LALT  &kp LCTRL  &mo 5   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 4   &kp DELETE
+&kp LCTRL       &kp Z   &kp X   &kp C     &kp V      &kp B   &mo 6        &paste         &kp N       &kp M   &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                                &kp LALT  &kp LCTRL  &mo 6   &kp SPACE    &kp BACKSPACE  &kp RETURN  &mo 5   &kp DELETE
             >;
+        };
+
+        symbol_layer {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4                     &trans       &trans                &trans                 &trans         &trans             &trans
+&none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &none              &none
+&none       &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND                    &kp POUND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &none
+&none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans    &trans  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SINGLE_QUOTE   &none
+                                            &trans            &trans             &trans         &trans    &trans  &trans       &trans                &trans
+            >;
+
+            label = "Symbols";
         };
 
         lower_layer {
@@ -111,16 +123,6 @@
 &none    &none         &none         &none         &none         &none                           &none        &kp LEFT   &kp DOWN   &kp RIGHT  &none     &none
 &kp F7   &kp F8        &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
                                      &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans           &trans         &trans            &trans             &trans                           &trans       &trans                &trans                 &trans         &trans             &trans
-&trans  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &none              &trans
-&trans  &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND                    &kp POUND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans    &trans  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SINGLE_QUOTE   &trans
-                                        &trans            &trans             &trans         &trans    &trans  &trans       &trans                &trans
             >;
         };
     };
