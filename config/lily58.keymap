@@ -82,6 +82,7 @@
         };
 
         symbol_layer {
+            display-name = "Symbols";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3       &bt BT_SEL 4                     &none        &none                 &none                  &none          &none              &none
 &none       &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &kp SLASH          &none
@@ -89,11 +90,10 @@
 &none       &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans    &trans  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SINGLE_QUOTE   &none
                                             &trans            &trans             &trans         &trans    &trans  &trans       &trans                &trans
             >;
-
-            label = "Symbols";
         };
 
         nav_layer {
+            display-name = "Navigation";
             bindings = <
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                     &trans         &trans                  &trans                   &trans           &trans      &trans
 &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10                    &kp PAGE_UP    &kp HOME                &kp UP_ARROW             &kp END          &trans      &trans
@@ -101,8 +101,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans   &trans    &trans  &kp LC(Z)      &kp LS(LC(LEFT_ARROW))  &kp LS(LC(RIGHT_ARROW))  &kp LS(F10)      &trans      &trans
                         &trans  &trans  &trans   &trans    &trans  &trans         &tog 4                  &trans
             >;
-
-            label = "Navigation";
         };
 
         gLower_layer {
